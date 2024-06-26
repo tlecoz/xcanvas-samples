@@ -1,0 +1,12 @@
+{
+    "basePath": "/src/samples/",
+    "samples": [
+        {
+            "name": "Align",
+            "files": [
+                "Align_Sample.ts",
+                "Sample.ts"
+            ]
+        }
+    ]
+}
