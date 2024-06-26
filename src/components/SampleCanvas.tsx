@@ -10,8 +10,8 @@ function SampleCanvas(props) {
     const [demo, setDemo] = useState(null);
 
     useEffect(() => {
-        console.clear = () => { }
-        console.log("canvas = ", props)
+        //console.clear = () => { }
+        //console.log("canvas = ", props)
         const canvas = canvasRef.current;
         if (!canvas) return;
         if (!sample) return;
@@ -44,7 +44,7 @@ function SampleCanvas(props) {
 
 
     useEffect(() => {
-        console.log("params = ", params);
+        // console.log("params = ", params);
     }, [params]);
 
 

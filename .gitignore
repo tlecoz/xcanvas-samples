@@ -25,3 +25,7 @@ public/assets/test.mp4
 *.njsproj
 *.sln
 *.sw?
+
+.localhost.crt
+.localhost.key
+.openssl.conf

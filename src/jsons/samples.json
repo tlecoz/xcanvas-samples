@@ -7,6 +7,12 @@
                 "Align_Sample.ts",
                 "Sample.ts"
             ]
+        },
+        {
+            "name": "MouseParticles",
+            "files": [
+                "MouseParticles_Sample.ts"
+            ]
         }
     ]
 }
