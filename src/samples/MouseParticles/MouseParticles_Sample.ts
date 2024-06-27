@@ -131,6 +131,8 @@ export class MouseParticles_Sample extends Sample {
 
             green *= 0.99;
 
+            if (!group.currentTransform) return
+
             const m: DOMMatrix = group.currentTransform.inverse();
             const p = m.transformPoint(new DOMPoint(mx, my))
 

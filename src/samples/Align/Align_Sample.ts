@@ -16,10 +16,10 @@ export class Align_Sample extends Sample {
 
 
         const contener = stage.appendChild(new Group2D()) as Group2D;
-        contener.align(Align.CENTER);
 
         contener.x = stage.stageWidth * 0.5;
         contener.y = stage.stageHeight * 0.5;
+        contener.align(Align.CENTER);
 
         const size = 400;
 
@@ -31,6 +31,7 @@ export class Align_Sample extends Sample {
         background.x = background.y = size * 0.5;
         background.align(Align.CENTER);
 
+
         const redSquare = new RenderStack([
             SquarePath.instance,
             new SolidFill(new SolidColor(127, 0, 0))
@@ -40,9 +41,10 @@ export class Align_Sample extends Sample {
         const topLeft = contener.appendChild(new Display2D(100, 100, redSquare));
         topLeft.align(Align.TOP_LEFT);
 
+
         const topRight = contener.appendChild(new Display2D(100, 100, redSquare));
         topRight.align(Align.TOP_RIGHT);
-        topRight.x = size
+        topRight.x = size;
 
         const bottomRight = contener.appendChild(new Display2D(100, 100, redSquare));
         bottomRight.align(Align.BOTTOM_RIGHT);
