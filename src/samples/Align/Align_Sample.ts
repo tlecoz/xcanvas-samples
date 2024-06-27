@@ -14,21 +14,45 @@ export class Align_Sample extends Sample {
 
 
 
-        const shapeStack = new RenderStack();
-        shapeStack.push(SquarePath.instance);
-        shapeStack.push(new SolidFill(new SolidColor(127, 127, 127)));
-
 
         const contener = stage.appendChild(new Group2D()) as Group2D;
-
+        contener.align(Align.CENTER);
 
         contener.x = stage.stageWidth * 0.5;
         contener.y = stage.stageHeight * 0.5;
 
+        const size = 400;
 
-        contener.appendChild(new Display2D(400, 400, shapeStack));
 
-        contener.align(Align.CENTER);
+
+        const background = contener.appendChild(new Display2D(size, size));
+        background.stack(SquarePath.instance);
+        background.stack(new SolidFill(new SolidColor(127, 127, 127)));
+        background.x = background.y = size * 0.5;
+        background.align(Align.CENTER);
+
+        const redSquare = new RenderStack([
+            SquarePath.instance,
+            new SolidFill(new SolidColor(127, 0, 0))
+        ]);
+
+
+        const topLeft = contener.appendChild(new Display2D(100, 100, redSquare));
+        topLeft.align(Align.TOP_LEFT);
+
+        const topRight = contener.appendChild(new Display2D(100, 100, redSquare));
+        topRight.align(Align.TOP_RIGHT);
+        topRight.x = size
+
+        const bottomRight = contener.appendChild(new Display2D(100, 100, redSquare));
+        bottomRight.align(Align.BOTTOM_RIGHT);
+        bottomRight.x = bottomRight.y = size
+
+        const bottomLeft = contener.appendChild(new Display2D(100, 100, redSquare));
+        bottomLeft.align(Align.BOTTOM_LEFT);
+        bottomLeft.y = size
+
+
 
 
 
