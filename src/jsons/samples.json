@@ -9,6 +9,12 @@
             ]
         },
         {
+            "name": "GetBounds",
+            "files": [
+                "GetBounds_Sample.ts"
+            ]
+        },
+        {
             "name": "MouseParticles",
             "files": [
                 "MouseParticles_Sample.ts"
