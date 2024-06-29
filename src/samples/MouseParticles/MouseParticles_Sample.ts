@@ -131,13 +131,14 @@ export class MouseParticles_Sample extends Sample {
 
         let ox, oy;
         const rect = stage.outputCanvas.getBoundingClientRect();
-        stage.outputCanvas.addEventListener("mousemove", (e) => {
 
+
+        const moving = (mouseX: number, mouseY: number) => {
             ox = mx;
             oy = my;
 
-            mx = e.clientX - rect.x;
-            my = e.clientY - rect.y;
+            mx = mouseX - rect.x;
+            my = mouseY - rect.y;
 
             const dx = ox - mx;
             const dy = oy - my;
@@ -150,6 +151,12 @@ export class MouseParticles_Sample extends Sample {
             motionRadius -= (motionRadius - 200) * 0.003;
             radius -= (radius - (radius - d)) * 0.2;
             green = d * 5;
+        }
+        stage.outputCanvas.addEventListener("touchmove", (e) => {
+            moving(e.touches[0].clientX, e.touches[0].clientY);
+        })
+        stage.outputCanvas.addEventListener("mousemove", (e) => {
+            moving(e.clientX, e.clientY);
         })
     }
 }
