@@ -17,7 +17,7 @@ export class GetBounds_Sample extends Sample {
 
         const createElement = (x: number, y: number, w: number, h: number, path: Path | RenderStack): { display: Display2D, bound: Display2D } => {
             //
-            const bound = stage.appendChild(new Display2D(0.1, 0.1, boundStack));
+            const bound = stage.appendChild(new Display2D(0, 0, boundStack));
             bound.align(Align.CENTER);
 
             const display = stage.appendChild(new Display2D(w, h));

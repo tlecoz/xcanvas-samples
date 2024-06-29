@@ -1,3 +1,5 @@
+export { Guide_Sample } from "./Guide/Guide_Sample"
+
 export { GetBounds_Sample } from "./GetBounds/GetBounds_Sample"
 
 export { MouseParticles_Sample } from "./MouseParticles/MouseParticles_Sample"
