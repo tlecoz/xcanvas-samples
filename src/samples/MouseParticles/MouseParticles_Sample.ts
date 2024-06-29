@@ -58,7 +58,7 @@ export class MouseParticles_Sample extends Sample {
         group.scaleX = group.scaleY = scale;
 
 
-        let radius = 500;
+        let radius = Math.min(window.innerWidth / 3, 500);
         let green = 0;
         let motionTime = 0;
         let motionRadius = 0;
@@ -153,6 +153,7 @@ export class MouseParticles_Sample extends Sample {
             green = d * 5;
         }
         stage.outputCanvas.addEventListener("touchmove", (e) => {
+            e.preventDefault();
             moving(e.touches[0].clientX, e.touches[0].clientY);
         })
         stage.outputCanvas.addEventListener("mousemove", (e) => {
