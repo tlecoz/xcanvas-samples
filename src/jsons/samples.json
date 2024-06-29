@@ -11,15 +11,15 @@
         {
             "name": "GetBounds",
             "files": [
-                "GetBounds_Sample.ts"
+                "GetBounds_Sample.ts",
+                "PolygonPath.ts",
+                "ChristmasTreePath.ts"
             ]
         },
         {
             "name": "MouseParticles",
             "files": [
-                "MouseParticles_Sample.ts",
-                "PolygonPath.ts",
-                "ChristmasTreePath.ts"
+                "MouseParticles_Sample.ts"
             ]
         }
     ]
