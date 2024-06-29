@@ -23,7 +23,7 @@ export class GetBounds_Sample extends Sample {
             const display = stage.appendChild(new Display2D(w, h));
             display.stack(path);
 
-            if (path instanceof Path) display.stack(new SolidFill(new SolidColor(127, 127, 127)));
+            if (path instanceof Path) display.stack(new SolidFill(new SolidColor(255, 255, 255)));
 
             bound.x = display.x = x + w * 0.5
             bound.y = display.y = y + h * 0.5;
@@ -41,8 +41,8 @@ export class GetBounds_Sample extends Sample {
             const r: Rectangle2D = element.display.updateBounds();
 
             if (r) {
-                element.bound.x = r.x //- r.width * 0.5;
-                element.bound.y = r.y //- r.height * 0.5;
+                element.bound.x = r.x;
+                element.bound.y = r.y;
                 element.bound.width = r.width;
                 element.bound.height = r.height;
             }
@@ -58,11 +58,8 @@ export class GetBounds_Sample extends Sample {
         shapes[nb++] = createElement(50, 100, 200, 100, SquarePath.instance);
         shapes[nb++] = createElement(550, 100, 200, 100, CirclePath.instance);
 
-        shapes[nb++] = createElement(300, 60, 200, 200, new PolygonPath(5));
+        shapes[nb++] = createElement(300, 60, 200, 200, new PolygonPath(6));
         shapes[nb++] = createElement(100, 400, 300, 300, ChristmasTreePath.instance);
-        //shapes[nb++] = createElement(350, 300, 200, 200, new PolygonPath(8));
-
-
 
         const img = new Img("./assets/homer.png");
 

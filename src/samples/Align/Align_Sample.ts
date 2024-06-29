@@ -4,16 +4,6 @@ import { Sample } from "./Sample";
 export class Align_Sample extends Sample {
 
     protected async start(stage: Stage2D) {
-        stage;
-
-
-
-
-
-
-
-
-
 
         const contener = stage.appendChild(new Group2D()) as Group2D;
 
@@ -23,26 +13,20 @@ export class Align_Sample extends Sample {
 
         const size = 400;
 
-
-
         const background = contener.appendChild(new Display2D(size, size));
         background.stack(SquarePath.instance);
         background.stack(new SolidFill(new SolidColor(127, 127, 127)));
         background.x = background.y = size * 0.5;
         background.align(Align.CENTER);
 
-
         const textStyle = new TextStyle("Arial", 40, "px");
         textStyle.lineStyle = new LineStyle(3);
-
-
 
         const redSquare = new RenderStack([
             SquarePath.instance,
             new SolidFill(new SolidColor(127, 0, 0)),
             new TextPath("TL"),
             new SolidTextFill(textStyle, new SolidColor(255, 255, 255))
-
         ]);
 
 
@@ -106,29 +90,10 @@ export class Align_Sample extends Sample {
         center.x = center.y = size / 2
         center.align(Align.CENTER);
 
-
-
         stage.addEventListener(Stage2D.DRAW_BEGIN, () => {
-            //console.log("draw")
 
             contener.rotation += 0.1;
         })
-
-
-
-
-
-
-
-        /*
-       const col1 = new SolidColor(255, 0, 0, 1);
-       const col2 = new SolidColor(0, 0, 255, 1);
-
-       const gradient = new GradientColor([col1, col2], [0.25, 0.75], false)
-       const gradientFill = new GradientFill(gradient);
-
-       shapeStack.push(gradientFill)
-       */
 
     }
 

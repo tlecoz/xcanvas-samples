@@ -5,22 +5,14 @@ export class Sample {
 
     private static current: Sample = null;
 
-
-
-
     constructor() {
         console.clear();
     }
 
     public params: { name: string, min?: number, max?: number, object: any, propName?: string, round?: boolean }[] = [];
     protected destroyed: boolean = false;
-
     protected renderer: Stage2D;
-
-
     protected _started: boolean = false;
-
-
     protected static canvas2d: HTMLCanvasElement;
 
     public init(canvas: HTMLCanvasElement) {
@@ -49,7 +41,6 @@ export class Sample {
         this.start(this.renderer);
 
         const animate = () => {
-            //this.update();
             this.renderer.drawElements();
             requestAnimationFrame(animate);
         }

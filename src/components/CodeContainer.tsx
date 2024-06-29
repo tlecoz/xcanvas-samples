@@ -22,7 +22,7 @@ function CodeContainer(props) {
             })
         }
         //loadText("https://raw.githubusercontent.com/tlecoz/xgpu-samples-website/main/src/samples/" + sample.name + "/" + sample.files[fileIndex]).then((text) => {
-        loadText("https://raw.githubusercontent.com/tlecoz/xgpu-samples/main/src/samples/" + sample.name + "/" + sample.files[fileIndex]).then((text) => {
+        loadText("https://raw.githubusercontent.com/tlecoz/xcanvas-samples/main/src/samples/" + sample.name + "/" + sample.files[fileIndex]).then((text) => {
             setFileContent(text);
         })
 
