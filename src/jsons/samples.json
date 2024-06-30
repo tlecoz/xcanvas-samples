@@ -21,6 +21,12 @@
             "files": [
                 "MouseParticles_Sample.ts"
             ]
+        },
+        {
+            "name": "Guide",
+            "files": [
+                "Guide_Sample.ts"
+            ]
         }
     ]
 }
