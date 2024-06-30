@@ -17,15 +17,15 @@
             ]
         },
         {
-            "name": "MouseParticles",
-            "files": [
-                "MouseParticles_Sample.ts"
-            ]
-        },
-        {
             "name": "Guide",
             "files": [
                 "Guide_Sample.ts"
+            ]
+        },
+        {
+            "name": "MouseParticles",
+            "files": [
+                "MouseParticles_Sample.ts"
             ]
         }
     ]

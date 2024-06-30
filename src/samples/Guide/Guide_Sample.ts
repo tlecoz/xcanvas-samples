@@ -9,12 +9,9 @@ export class Guide_Sample extends Sample {
 
 
         const shapeSize = 500;
-
-
-
-
+        const path = ChristmasTreePath.instance.clone();
         const shape = stage.appendChild(new Display2D(shapeSize, shapeSize, new RenderStack([
-            ChristmasTreePath.instance,
+            path,
             new SolidFill(new SolidColor(0xffcc00))
         ])))
 
@@ -33,7 +30,9 @@ export class Guide_Sample extends Sample {
         const startTime = new Date().getTime();
         const durationInMilliseconds = 5000;
         stage.addEventListener(Stage2D.DRAW_BEGIN, () => {
+            if (!interactivePath) return;
             const time = new Date().getTime() - startTime;
+
             const { x, y } = interactivePath.getPointAtTime(shape, time, durationInMilliseconds);
             circle.x = x;
             circle.y = y;

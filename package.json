@@ -15,7 +15,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "sass": "^1.72.0",
-    "xcanvas-ts": "file:../XCanvas"
+    "xcanvas-ts": "^0.9.16"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
